@@ -2,10 +2,10 @@
 const express = require('express');
 const cors = require('cors');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
-require('dotenv').config({ path: '../web/.env' }); // Re-use the existing .env if possible
+require('dotenv').config(); // Look for .env in the current directory
 
 const app = express();
-const port = 3001;
+const port = 3005;
 
 app.use(cors());
 app.use(express.json());
