@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurums AI - Standalone Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div id="chat-widget">
+        <!-- Launcher -->
+        <button id="chat-launcher" class="pulse">
+            <img src="ai-bull.png" alt="Aurums AI">
+            <span class="status-dot"></span>
+        </button>
+
+        <!-- Chat Container -->
+        <div id="chat-container" class="hidden">
+            <header>
+                <div class="header-content">
+                    <div class="avatar-wrapper">
+                        <img src="ai-bull.png" alt="Aurums AI">
+                    </div>
+                    <div class="header-text">
+                        <h3>Aurums AI</h3>
+                        <p>Trading Companion</p>
+                    </div>
+                </div>
+                <button id="close-chat" aria-label="Close Chat">
+                    <i data-lucide="x"></i>
+                </button>
+            </header>
+
+            <div id="message-list">
+                <!-- Messages will appear here -->
+            </div>
+
+            <div id="quick-actions">
+                <button class="quick-btn" data-query="Calculate lot size for 1% risk on XAUUSD">Lot Size Calc</button>
+                <button class="quick-btn" data-query="What is the pip value for XAUUSD?">Pip Value</button>
+                <button class="quick-btn" data-query="When are the best XAU/USD trading sessions?">Sessions</button>
+                <button class="quick-btn" data-query="Show my recent trading history summary">Trading History</button>
+            </div>
+
+            <footer>
+                <form id="chat-form">
+                    <input type="text" id="chat-input" placeholder="Ask Aurums AI..." autocomplete="off">
+                    <button type="submit" id="send-btn" disabled>
+                        <i data-lucide="send"></i>
+                    </button>
+                </form>
+            </footer>
+        </div>
+    </div>
+
+    <script src="mock-data.js"></script>
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
